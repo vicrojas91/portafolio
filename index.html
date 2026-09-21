@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <!-- Codificación y metadatos básicos de la página -->
+        <meta charset="UTF-8">
+        <meta name="author" content="Victor Rodrigo Rojas Rojas">
+        <meta name="description" content="Portafolio profesional">
+        <meta name="keywords" content="HTML, CSS, Bootstrap, Portafolio, Desarrollo Web">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Portafolio | Victor Rodrigo Rojas Rojas</title>
+        
+        <!-- Favicon: imagen pequeña que aparece en la pestaña del navegador -->
+        <link rel="icon" type="image/png" href="assets/img/logo.jpeg">
+        
+        <!-- Bootstrap: framework CSS que facilita el diseño responsivo -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        
+        <!-- Bootstrap Icons: biblioteca de íconos utilizada en tarjetas, botones y redes sociales -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+        <!-- Fuente Montserrat desde Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- Hoja de estilos personalizada del proyecto -->
+         <link rel="preload" href="assets/css/style.css" as="style">
+         <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+    
+    <body>
+        <!-- === BARRA DE NAVEGACIÓN La clase sticky-top mantiene el menú visible al desplazarse. === -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top shadow-sm">
+            <div class="container">
+
+                <!-- Marca o logotipo del sitio -->
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+                    <img src="assets/img/logo.jpeg" alt="Logo del portafolio" width="36" height="36">
+                    <span>VR Rojas</span>
+                </a>
+                
+                <!-- Botón hamburguesa: aparece en pantallas pequeñas -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"> </span>
+                </button>
+
+                <!-- Enlaces del menú. Cada href apunta a una sección con id. -->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#sobre-mi">Sobre mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experiencia">Experiencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#articulos">Artículos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonios">Testimonios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary rounded-pill px-4" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- === ENCABEZADO PRINCIPAL / HERO Presenta la identidad del sitio y sus llamadas a la acción. === -->
+        <header id="inicio" class="hero">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    
+                    <!-- Texto principal del hero -->
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <span class="badge rounded-pill hero-badge mb-3"> Consultoría informática · Desarrollo Web · Formación digital </span>
+                        <h1>Hola, soy Victor Rodrigo Rojas Rojas.</h1>
+                        <p class="lead hero-texto"> Soy ingeniero en tecnologías computacionales, con experiencia en soporte de sistemas. Me gusta trabajar en equipo para crear soluciones eficientes y busco seguir creciendo en proyectos tecnológicos desafiantes. </p>
+                        
+                        <!-- Botones de acción rápida -->
+                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                            <a class="btn btn-primary btn-lg rounded-pill" href="#experiencia"> Ver servicios <i class="bi bi-arrow-right-circle ms-1"></i> </a>
+                            <a class="btn btn-outline-primary btn-lg rounded-pill" href="#articulos"> Leer artículos </a>
+                        </div>
+                    </div>
+
+                    <!-- Bloque visual del hero -->
+                    <div class="col-lg-6">
+                        <div class="hero-card mx-auto">
+                            
+                            <!-- Si el archivo se llama diferente, ajustar la ruta src. -->
+                            <img class="perfil-imagen rounded-circle" src="assets/img/victor.jpeg" alt="Foto del desarrollador">
+                            <img class="hero-imagen" src="assets/img/computo.jfif" alt="Equipo de cómputo utilizado para desarrollo web">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- === SECCIÓN SOBRE MÍ Explica de manera breve el perfil profesional. === -->
+        <main>
+            <section id="sobre-mi" class="seccion seccion-oscura">
+                <div class="container text-center">
+                    <h2 class="seccion-titulo">Conoce un poco de mí</h2>
+                    <p class="sobre-mi-texto mx-auto"> Soy profesional en el área de Tecnologías de la Información y Comunicación. Me dedico a diseñar, desarrollar y optimizar soluciones tecnológicas que simplifiquen procesos, mejoren la seguridad de la información y faciliten el día a día de las personas y las empresas.  </p>
+                </div>
+            </section>
+            
+            <!-- ===== EXPERIENCIA PROFESIONAL Tres tarjetas responsivas que resumen los servicios principales ===== -->
+            <section id="experiencia" class="seccion seccion-clara">
+                <div class="container text-center">
+                    <h2 class="seccion-titulo">Experiencia profesional</h2>
+                    <p class="seccion-descripcion"> Mi objetivo principal es hacer que la tecnología trabaje a favor de nuestros objetivos, transformando retos complejos en herramientas sencillas y funcionales. ¡Quedo a su disposición para cualquier duda o colaboración!</p>
+                    <div class="row g-4">
+                        
+                        
+                        <!-- Tarjeta 1 -->
+                        <div class="col-12 col-md-4">
+                            <article class="servicio-card h-100">
+                                <i class="bi bi-cpu-fill"></i>
+                                <h3> Mantenimiento tecnológico </h3>
+                                <p> Diagnóstico y mantenimiento preventivo y correctivo. </p>
+                                <div class="badges-contenedor">
+                                    <span class="badge text-bg-primary">Equipo de cómputo</span>
+                                    <span class="badge text-bg-primary">Multifuncionales</span>
+                                    <span class="badge text-bg-primary">Dispositivos portátiles</span>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <!-- Tarjeta 2 -->
+                        <div class="col-12 col-md-4">
+                            <article class="servicio-card h-100">
+                                <i class="bi bi-code-slash"></i>
+                                <h3>Desarrollo web</h3>
+                                <p> Creación de sitios web según las necesidades del usuario con herramientas modernas y de última generación. </p>
+                                <div class="badges-contenedor">
+                                    <span class="badge text-bg-primary">HTML</span>
+                                    <span class="badge text-bg-primary">CSS</span>
+                                    <span class="badge text-bg-primary">PHP</span>
+                                    <span class="badge text-bg-primary">Bootstrap</span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Tarjeta 3 -->
+                        <div class="col-12 col-md-4">
+                            <article class="servicio-card h-100">
+                                <i class="bi bi-mortarboard-fill"></i>
+                                <h3>Asesoria académica</h3>
+                                <p> Diseño de cursos, capacitación y acompañamiento docente para fortalecer competencias digitales y tecnológicas. </p>
+                                <div class="badges-contenedor">
+                                    <span class="badge text-bg-primary">Cursos</span>
+                                    <span class="badge text-bg-primary">Diplomados</span>
+                                    <span class="badge text-bg-primary">Tutoría</span>
+                                    <span class="badge text-bg-primary">E-learning</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== ARTÍCULOS INFORMATIVOS ===== -->
+            <section id="articulos" class="seccion articulos">
+                <div class="container">
+
+                    <div class="text-center mb-4">
+                        <h2 class="seccion-titulo">Artículos informativos.</h2>
+                        <p class="seccion-descripcion"> Una selección de lecturas para conectar la tecnología con temas actuales de educación, salud e inteligencia artificial. </p>
+                    </div>
+
+                    <div class="card articulos-card mx-auto">
+
+                        <div class="card-header">
+                            <i class="bi bi-journal-text me-2"></i>Más recientes
+                        </div>
+                        
+                        <div class="list-group list-group-flush">
+                            
+                            <a class="list-group-item list-group-item-action" href="https://www.redtis.org/index.php/Redtis/es/article/view/241" target="_blank" rel="noopener noreferrer"> Estudio exploratorio sobre desvíos en el modelado de software orientado a objetos en proyectos finales. </a>
+                            <a class="list-group-item list-group-item-action" href="https://www.redtis.org/index.php/Redtis/es/article/view/255" target="_blank" rel="noopener noreferrer"> diseño de una actividad con integración stem en la enseñanza de redes. </a>
+                            <a class="list-group-item list-group-item-action" href="https://www.redtis.org/index.php/Redtis/es/article/view/259" target="_blank" rel="noopener noreferrer"> Propuesta de integración gradual de la inteligencia artificial en los planes de estudio de educación superior. </a>
+                            <a class="list-group-item list-group-item-action" href="https://www.redtis.org/index.php/Redtis/es/article/view/265" target="_blank" rel="noopener noreferrer"> El uso de las tecnologías de la información y comunicación para apoyar el aprendizaje de estudiantes con barreras para el aprendizaje y la participación en el nivel medio superior. </a>
+                                                        
+                        </div>
+                        
+                        <div class="card-body text-center">
+                            <a class="btn btn-info rounded-pill px-4" href="https://www.redtis.org/index.php/Redtis" target="_blank" rel="noopener noreferrer"> Ver más artículos <i class="bi bi-arrow-right-circle-fill ms-1"></i> </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+            
+            <!-- ===== TESTIMONIOS Carrusel de Bootstrap. ===== -->
+            <section id="testimonios" class="seccion seccion-clara testimonios text-center">
+                <div class="container"> <h2 class="seccion-titulo">Testimonios</h2>
+                    <p class="seccion-descripcion">Estos son algunos comentarios.</p>
+                    <div id="testimoniosCarrusel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+
+                        <div class="carousel-inner">
+                            
+                            <!-- Testimonio 1 -->
+                            <div class="carousel-item active">
+
+                                <div class="testimonio-card mx-auto">
+                                    <img class="testimonio-imagen rounded-circle" src="assets/img/gerardo.jfif" alt="Foto de Augusto Pineda">
+                                    <p class="testimonio-texto"> “Superó completamente nuestras expectativas,  la página es muy intuitiva y fácil de navegar.” </p>
+                                    
+                                    <div class="testimonio-info">
+                                        <p class="cliente">Gerardo Lopez</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonio 2 -->
+                            <div class="carousel-item">
+                                <div class="testimonio-card mx-auto">
+                                    <img class="testimonio-imagen rounded-circle" src="assets/img/rodrigo.jfif" alt="Foto de Pedro Ortega">
+                                    <p class="testimonio-texto"> “Detectaron fallas que otros técnicos no habían visto, y los equipos quedaron funcionando como nuevos” </p>
+
+                                    <div class="testimonio-info">
+                                        <p class="cliente">Rodrigo Calderon</p>                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonio 3 -->
+                             <div class="carousel-item">
+                                <div class="testimonio-card mx-auto">
+                                    <img class="testimonio-imagen rounded-circle" src="assets/img/alan.jfif" alt="Foto de Gonzalo Zurita">
+                                    <p class="testimonio-texto">“El material didáctico y las presentaciones fueron impecables. El instructor domina el tema al 100% y sabe cómo explicarlo fácil.” </p>
+                                    <div class="testimonio-info">
+                                        <p class="cliente">Alan Berinstain</p>                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- ===== CONTACTO ===== -->
+                        <section id="contacto" class="contacto seccion-oscura">
+                            <div class="container">
+                                <div class="contacto-panel text-center text-lg-start">
+                                    <div class="row align-items-center g-4">
+                                        <div class="col-12 col-lg-4">
+                                            <h2>Hablemos</h2>
+                                        </div>
+                                        
+                                        <div class="col-12 col-lg-5">
+                                            <p> Contáctame para crear tu sitio web, diagnostico y/o mantenimiento a tus equipos tecnológicos; así como para asesoría en la impartición de cursos. </p>
+                                        </div>
+                                        
+                                        <div class="col-12 col-lg-3 text-center text-lg-end"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+        </main>
+
+        <!-- ===== FOOTER Y REDES SOCIALES Cierre del sitio con enlaces externos y derechos de autor. ===== -->
+        <footer class="seccion-oscura d-flex flex-column justify-content-center align-items-center text-center">
+            <img class="footer-logo" src="assets/img/logo.jpeg" alt="Logo del proyecto">
+            <p class="footer-texto"> Comprometido con dar siempre lo mejor.
+                <br> Trabajemos de la mano. 
+            </p>
+
+            <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+                <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="mailto:vic.rojas@mimail.com" aria-label="Enviar correo"><i class="bi bi-envelope"></i></a>
+            </div>
+        </footer>
+
+        <div class="derechos-autor"> &#169; Todos los derechos reservados 2026, Victor Rodrigo Rojas Rojas </div>
+        
+        <!-- JavaScript de Bootstrap: necesario para menú colapsable y carrusel -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    </body>
+</html>
