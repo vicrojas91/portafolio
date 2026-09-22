@@ -1,27 +1,28 @@
 /* ===================================================== ESTILOS GENERALES Aquí se definen los colores, fuente y reglas base. ===================================================== */
 :root {
-    ---azul-principal: #5d9ad3; 
-    --azul-oscuro: #062b64; 
-    -azul-suave: #b9d4f8; 
+    --azul-principal: #56a5f0; 
+    --azul-oscuro: #002b6b; 
+    --azul-suave: #9fbfe9; 
     --verde-acento: #7ade30; 
     --texto-principal: #1b1b32; 
     --texto-secundario: #615151; 
     --fondo-claro: #8bacee; 
     --blanco: #ffffff;
     --rojo: #e75050; 
-    --sombra-suave: 0 12px 30px rgba(13, 110, 253, 0.12); 
+    --sombra-suave: 0 12px 30px rgba(11, 64, 143, 0.12); 
 }
 
-/* box-sizing facilita calcular tamaños de objetos */ * {
+/* box-sizing facilita calcular tamaños de objetos */ {
     box-sizing: border-box; 
 } 
 
-html { scroll-behavior: smooth; 
-    }
+html { 
+    scroll-behavior: smooth; 
+}
 
 body {
     margin: 0; 
-    font-family: 'Montserrat', sans-serif; 
+    font-family: "Lora", serif;
     color: var(--texto-principal); 
     background-color: var(--azul-suave); 
 }
@@ -55,7 +56,8 @@ img {
 } 
     
 /* Mejora la accesibilidad visual al navegar con teclado. */ 
-a:focus, button:focus { 
+a:focus,
+button:focus { 
     outline: 3px solid rgba(122, 222, 48, 0.65); 
     outline-offset: 3px; 
 }
@@ -76,7 +78,7 @@ a:focus, button:focus {
 } 
 
 .navbar .btn-primary { 
-    box-shadow: 0 8px 18px rgba(13, 110, 253, 0.18); 
+    box-shadow: 0 8px 18px rgba(4, 88, 214, 0.18); 
 }
 
 /* === HERO Se utiliza un fondo degradado suave y una tarjeta visual. === */ 
@@ -90,7 +92,7 @@ a:focus, button:focus {
 .hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); 
     font-weight: 800; 
     line-height: 1.1; 
-    color: var(--azul-suave); 
+    color: var(--azul-oscuro); 
 } 
 
 .hero-texto { 
@@ -205,8 +207,8 @@ a:focus, button:focus {
 .card-header { 
     padding: 1rem 1.25rem; 
     font-weight: 800; 
-    color: var(--#ffffff);
-    background-color: var(--azul-principal); 
+    color: var(--blanco);
+    background-color: var(--rojo); 
 } 
 
 .articulos-card 
@@ -275,7 +277,7 @@ a:focus, button:focus {
 .contacto-panel { 
     padding: 36px; 
     border-radius: 28px; 
-    background: linear-gradient(135deg, var(--azul-principal), #3b82f6); 
+    background: linear-gradient(135deg, #4e84d4), #2275fa); 
     box-shadow: 0 14px 34px rgba(13, 110, 253, 0.3); 
 } 
 
