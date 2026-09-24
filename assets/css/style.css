@@ -1,8 +1,9 @@
-/* ===================================================== ESTILOS GENERALES Aquí se definen los colores, fuente y reglas base. ===================================================== */
+/* === ESTILOS GENERALES Aquí se definen los colores, fuente y reglas base. === */
 :root {
     --azul-principal: #56a5f0; 
     --azul-oscuro: #002b6b; 
     --azul-suave: #9fbfe9; 
+    --azul-tenue: #d8f4ff;
     --verde-acento: #7ade30; 
     --texto-principal: #1b1b32; 
     --texto-secundario: #615151; 
@@ -12,357 +13,366 @@
     --sombra-suave: 0 12px 30px rgba(11, 64, 143, 0.12); 
 }
 
-/* box-sizing facilita calcular tamaños de objetos */ {
-    box-sizing: border-box; 
-} 
+/* box-sizing facilita calcular tamaños de objetos */
+* {
+    box-sizing: border-box;
+}
 
-html { 
-    scroll-behavior: smooth; 
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0; 
+    margin: 0;
     font-family: "Lora", serif;
-    color: var(--texto-principal); 
-    background-color: var(--azul-suave); 
+    color: var(--texto-principal);
+    background-color: var(--azul-suave);
 }
 
-img { 
-    max-width: 100%; 
-} 
+img {
+    max-width: 100%;
+}
 
-.seccion { 
-    padding: 80px 0; 
-} 
+.seccion {
+    padding: 80px 0;
+}
 
 .seccion-clara {
-    background-color: var(--blanco); 
-} 
+    background-color: var(--blanco);
+}
 
 .seccion-oscura {
     color: var(--blanco);
     background: linear-gradient(135deg, var(--azul-oscuro), #111827); 
-} 
-
-.seccion-titulo { 
-    font-size: clamp(2rem, 4vw, 2.8rem); 
-    font-weight: 800; margin-bottom: 1rem; 
-} 
-
-.seccion-descripcion { 
-    color: var(--texto-secundario); 
-    font-size: 1.05rem; max-width: 720px; 
-    margin: 0 auto 2rem auto; 
-} 
-    
-/* Mejora la accesibilidad visual al navegar con teclado. */ 
-a:focus,
-button:focus { 
-    outline: 3px solid rgba(122, 222, 48, 0.65); 
-    outline-offset: 3px; 
 }
 
-/* === BARRA DE NAVEGACIÓN Se mejora la legibilidad, el espaciado y el comportamiento hover. === */ 
-.navbar { padding: 0.9rem 0; } 
-.navbar-brand { font-weight: 800; 
-    color: var(--azul-oscuro); 
-} 
+.seccion-titulo {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800; margin-bottom: 1rem;
+}
 
-.nav-link { 
-    font-weight: 600; color: var(--texto-principal); 
-} 
+.seccion-descripcion {
+    color: var(--texto-secundario);
+    font-size: 1.05rem; max-width: 720px;
+    margin: 0 auto 2rem auto;
+}
+    
+/* Mejora la accesibilidad visual al navegar con teclado. */
+a:focus,
+button:focus {
+    outline: 3px solid rgba(122, 222, 48, 0.65);
+    outline-offset: 3px;
+}
 
-.nav-link:hover, 
-.nav-link.active { 
-    color: var(--azul-principal); 
-} 
+/* === BARRA DE NAVEGACIÓN Se mejora la legibilidad, el espaciado y el comportamiento hover. === */
+.navbar {
+    padding: 0.9rem 0;
+}
 
-.navbar .btn-primary { 
+.navbar-brand {
+    font-weight: 800;
+    color: var(--azul-oscuro);
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--texto-principal);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--azul-principal);
+}
+
+.navbar,
+.btn-primary { 
     box-shadow: 0 8px 18px rgba(4, 88, 214, 0.18); 
 }
 
-/* === HERO Se utiliza un fondo degradado suave y una tarjeta visual. === */ 
-.hero { 
-    min-height: 720px; 
-    display: flex; align-items: center; 
-    padding: 90px 0; 
+/* === HERO Se utiliza un fondo degradado suave y una tarjeta visual. === */
+.hero {
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+    padding: 90px 0;
     background: radial-gradient(circle at top left, rgba(122, 222, 48, 0.18), transparent 28%), linear-gradient(180deg, #ffffff 0%, var(--azul-suave) 100%); 
-} 
-
-.hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); 
-    font-weight: 800; 
-    line-height: 1.1; 
-    color: var(--azul-oscuro); 
-} 
-
-.hero-texto { 
-    color: var(--texto-secundario); 
-    margin: 1.3rem 0 2rem 0; 
 }
 
-.hero-badge { 
-    color: var(--azul-oscuro); 
+.hero h1 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--azul-oscuro);
+}
+
+.hero-texto {
+    color: var(--texto-secundario);
+    margin: 1.3rem 0 2rem 0;
+}
+
+.hero-badge {
+    color: var(--azul-oscuro);
     background-color: rgba(13, 110, 253, 0.1);
-    border: 1px solid rgba(13, 110, 253, 0.2); 
+    border: 1px solid rgba(13, 110, 253, 0.2);
 }
 
-.hero-card { 
-    max-width: 520px; 
+.hero-card {
+    max-width: 520px;
     padding: 24px;
-    border-radius: 32px; 
-    background-color: var(--blanco); 
-    box-shadow: var(--sombra-suave); 
+    border-radius: 32px;
+    background-color: var(--azul-tenue);
+    box-shadow: var(--sombra-suave);
     text-align: center;
 } 
     
-.perfil-imagen { 
-    width: 145px; 
-    height: 145px; 
-    object-fit: cover; 
-    border: 6px solid var(--azul-suave); 
-    margin-bottom: 1rem; 
-} 
+.perfil-imagen {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    border: 6px solid var(--rojo);
+    margin-bottom: 1rem;
+}
     
-.hero-imagen { 
-    width: 100%; 
-    border-radius: 24px; 
-    object-fit: cover; 
+.hero-imagen {
+    width: 100%;
+    border-radius: 24px;
+    object-fit: cover;
 }
 
 /* === SOBRE MÍ Texto centrado y con ancho controlado para mejorar la lectura. === */ 
-.sobre-mi-texto { 
-    max-width: 850px; 
-    font-size: 1.08rem; 
-    line-height: 1.9; 
-    color: rgba(255, 255, 255, 0.9); 
+.sobre-mi-texto {
+    max-width: 850px;
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.9);
     }
 
 /* === EXPERIENCIA PROFESIONAL Las tarjetas usan sombra, bordes redondeados y efecto hover. === */ 
-.servicio-card { 
-    padding: 32px 24px; 
-    border: 1px solid rgba(13, 110, 253, 0.12); 
-    border-radius: 26px; 
-    background-color: var(--blanco); 
-    box-shadow: 0 12px 28px rgba(17, 24, 39, 0.06); 
-    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease; 
-} 
+.servicio-card {
+    padding: 32px 24px;
+    border: 1px solid rgba(13, 110, 253, 0.12);
+    border-radius: 26px;
+    background-color: var(--blanco);
+    box-shadow: 0 12px 28px rgba(17, 24, 39, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
     
-.servicio-card:hover { 
-    transform: translateY(-8px); 
-    color: var(--blanco); 
-    background-color: var(--azul-oscuro); 
-    box-shadow: 0 18px 36px rgba(6, 43, 100, 0.22); 
+.servicio-card:hover {
+    transform: translateY(-8px);
+    color: var(--blanco);
+    background-color: var(--azul-oscuro);
+    box-shadow: 0 18px 36px rgba(6, 43, 100, 0.22);
 }
 
-.servicio-card i { 
-    width: 64px; 
-    height: 64px; 
-    display: inline-flex; 
-    justify-content: center; 
-    align-items: center; 
+.servicio-card i {
+    width: 64px;
+    height: 64px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 1rem;
-    font-size: 1.8rem; 
-    color: var #00000000; 
-    background-color: var(--verde-acento); 
-    border-radius: 50%; 
+    font-size: 1.8rem;
+    color: var #00000000;
+    background-color: var(--verde-acento);
+    border-radius: 50%;
 } 
         
 .servicio-card h3 {
-    font-size: 1.35rem; 
-    font-weight: 800; 
-    margin-bottom: 1rem; 
-} 
-
-.servicio-card p { 
-    line-height: 1.7; 
-} 
-
-.badges-contenedor { 
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 8px; 
-    margin-top: 1rem; 
-} 
-
-.badge { 
-    padding: 0.55rem 0.75rem; 
-    border-radius: 999px; 
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
 }
 
-/* === ARTÍCULOS INFORMATIVOS Se usa una tarjeta central con enlaces visibles y hover. === */ 
-.articulos { 
-    background-color: var(--azul-suave); 
-} 
+.servicio-card p {
+    line-height: 1.7;
+}
 
-.articulos-card { 
-    max-width: 760px; 
-    border: none; 
-    border-radius: 24px; 
-    overflow: hidden; 
-    box-shadow: var(--sombra-suave); 
-} 
+.badges-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1rem;
+}
 
-.articulos-card 
-.card-header { 
-    padding: 1rem 1.25rem; 
-    font-weight: 800; 
+.badge {
+    padding: 0.55rem 0.75rem;
+    border-radius: 999px;
+}
+
+/* === ARTÍCULOS INFORMATIVOS Se usa una tarjeta central con enlaces visibles y hover. === */
+.articulos {
+    background-color: var(--azul-suave);
+}
+
+.articulos-card {
+    max-width: 760px;
+    border: none;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+}
+
+.articulos-card,
+.card-header {
+    padding: 1rem 1.25rem;
+    font-weight: 800;
     color: var(--blanco);
-    background-color: var(--rojo); 
-} 
-
-.articulos-card 
-.list-group-item { 
-    padding: 1rem 1.25rem; 
-    font-weight: 600; 
+    background-color: var(--rojo);
 }
 
-.articulos-card 
-.list-group-item:hover { 
-    color: var(--rojo); 
-    background-color: #f0f7ff; 
+.articulos-card,
+.list-group-item {
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+}
+
+.articulos-card,
+.list-group-item:hover {
+    color: var(--rojo);
+    background-color: #f0f7ff;
 }
 
 /* === TESTIMONIOS El carrusel === */ 
-.testimonios 
-.carousel { 
-    max-width: 850px; 
+.testimonios,
+.carousel {
+    max-width: 850px;
     margin: 0 auto;
 }
 
-.testimonio-card { 
-    max-width: 720px; 
-    min-height: 390px; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    padding: 36px 56px; 
-    border-radius: 28px; 
-    background-color: var(--blanco); 
-    box-shadow: 0 12px 28px rgba(17, 24, 39, 0.08); 
-} 
+.testimonio-card {
+    max-width: 720px;
+    min-height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 36px 56px;
+    border-radius: 28px;
+    background-color: var(--blanco);
+    box-shadow: 0 12px 28px var(--rojo);
+}
 
-.testimonio-imagen { 
-    width: 130px; height: 130px; 
-    object-fit: cover; 
-    margin-bottom: 1.2rem; 
-    border: 5px solid var(--azul-suave); 
-} 
+.testimonio-imagen {
+    width: 130px; height: 130px;
+    object-fit: cover;
+    margin-bottom: 1.2rem;
+    border: 5px solid var(--rojo);
+}
 
-.testimonio-texto { 
-    color: var(--texto-secundario); 
-    font-size: 1rem; line-height: 1.8; 
-} 
+.testimonio-texto {
+    color: var(--texto-secundario);
+    font-size: 1rem; line-height: 1.8;
+}
 
-.testimonio-info 
-.cliente { 
-    margin-bottom: 0; 
-    font-size: 1.15rem; 
-    font-weight: 800; 
-} 
+.testimonio-info,
+.cliente {
+    margin-bottom: 0;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
 
-.testimonio-info 
-.cargo { 
-    margin-bottom: 0; 
-    color: var(--texto-secundario); 
-    font-size: 0.92rem; 
+.testimonio-info,
+.cargo {
+    margin-bottom: 0;
+    color: var(--texto-secundario);
+    font-size: 0.92rem;
 }
 
 /* === CONTACTO Panel flotante === */ 
-.contacto { 
-    padding: 80px 0; 
+.contacto {
+    padding: 80px 0;
 }
 
-.contacto-panel { 
-    padding: 36px; 
-    border-radius: 28px; 
+.contacto-panel {
+    padding: 36px;
+    border-radius: 28px;
     background: linear-gradient(135deg, #4e84d4), #2275fa); 
-    box-shadow: 0 14px 34px rgba(13, 110, 253, 0.3); 
-} 
+    box-shadow: 0 14px 34px rgba(13, 110, 253, 0.3);
+}
 
-.contacto-panel h2 { 
-    margin: 0; 
-    font-weight: 800; 
-} 
+.contacto-panel h2 {
+    margin: 0;
+    font-weight: 800;
+}
 
-.contacto-panel p { 
-    margin: 0; 
-    color: rgba(255, 255, 255, 0.92); 
-} 
+.contacto-panel p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.92);
+}
 
-/*=== FOOTER Y REDES SOCIALES === */ 
-footer { 
-    min-height: 260px; 
-    padding: 40px 20px; 
-} 
+/*=== FOOTER Y REDES SOCIALES === */
+footer {
+    min-height: 260px;
+    padding: 40px 20px;
+}
 
-.footer-logo { 
-    width: 82px; 
-    height: 82px; 
-    margin-bottom: 1rem; 
-} 
+.footer-logo {
+    width: 82px;
+    height: 82px;
+    margin-bottom: 1rem;
+}
 
-.footer-texto { 
-    font-size: 1.1rem; 
-    line-height: 1.7; 
-    margin-bottom: 1.4rem; 
+.footer-texto {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.4rem;
 }
 
 .iconos-redes-sociales {
-    gap: 12px; 
-} 
+    gap: 12px;
+}
 
-.iconos-redes-sociales a { 
-    width: 50px; 
-    height: 50px; 
-    display: inline-flex; 
-    justify-content: center; 
-    align-items: center; 
-    color: var(--blanco); 
+.iconos-redes-sociales a {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
     border: 2px solid rgba(255, 255, 255, 0.75);
-    border-radius: 50%; 
-    transition: all 0.25s ease; 
+    border-radius: 50%;
+    transition: all 0.25s ease;
 } 
 
-.iconos-redes-sociales a:hover { 
-    color: var(--azul-oscuro); 
-    background-color: var(--blanco); 
-    transform: translateY(-4px); 
-} 
+.iconos-redes-sociales a:hover {
+    color: var(--azul-oscuro);
+    background-color: var(--blanco);
+    transform: translateY(-4px);
+}
 
-.iconos-redes-sociales i { 
-    font-size: 1.35rem; 
-} 
+.iconos-redes-sociales i {
+    font-size: 1.35rem;
+}
 
 .derechos-autor {
-    padding: 18px; 
-    text-align: center; 
-    color: var(--texto-secundario); 
-    background-color: var(--blanco); 
-    font-size: 0.9rem; 
+    padding: 18px;
+    text-align: center;
+    color: var(--texto-secundario);
+    background-color: var(--blanco);
+    font-size: 0.9rem;
 } 
 
 /*===================================================== RESPONSIVE Ajustes para pantallas pequeñas. ===================================================== */ 
 @media (max-width: 991px) {
-    .hero { 
-        min-height: auto; 
-        padding: 70px 0; 
-    } 
+    .hero {
+        min-height: auto;
+        padding: 70px 0;
+    }
     
-    .hero-card { 
-        max-width: 440px; 
-    } 
+    .hero-card {
+        max-width: 440px;
+    }
 } 
 
-@media (max-width: 576px) { 
-    .seccion { 
-        padding: 60px 0; 
-    } 
-    .testimonio-card { 
-        padding: 28px 24px; 
-    } 
-        .contacto-panel { 
-            padding: 28px 20px; 
-        } 
+@media (max-width: 576px) {
+    .seccion {
+        padding: 60px 0;
+    }
+    .testimonio-card {
+        padding: 28px 24px;
+    }
+        .contacto-panel {
+            padding: 28px 20px;
+        }
     }
